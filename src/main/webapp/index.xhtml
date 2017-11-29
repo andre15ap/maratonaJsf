@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+     <html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:f="http://java.sun.com/jsf/core">
+ <h:head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ 	
+     <title>Minha primeira aplicação com JSF</title>
+     <!-- link para bootstrap -->
+     
+ </h:head>
+ <h:body>
+     <h:outputText value="Ola mundo !"/>
+     <h1>Será se h1 funciona?</h1>
+     <h2>Olh o h2 tambem </h2>
+     
+	Valor : #{ testeBean.numero }
+	
+	<h:form>
+		<h1>Trocar numrero</h1>
+		<h:inputText value="#{testeBean.numero}"/>
+		<br/>
+		<h:commandButton value="trocar valor" />
+	</h:form>
+	
+	
+	<h:form>
+		<h1>incrementar numero</h1>
+
+		<h:commandButton value="Aumentar" action="#{testeBean.incrementaNumero}" />
+	</h:form>
+	
+
+ </h:body>
+ </html>

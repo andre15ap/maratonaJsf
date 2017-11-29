@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+<title>Lista de nomes</title>
+</h:head>
+<h:body>
+	<h1>ola lista</h1>
+	
+		<h3> nome : #{user.nome}</h3>
+	
+	<h:form>
+		<h1>Trocar numrero</h1>
+		<h:inputText value="#{user.nome}"/>
+		<br/>
+		<h:commandButton value="trocar nome" />
+	</h:form>
+	
+</h:body>
+</html>
