@@ -2,6 +2,7 @@
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
      <html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
      xmlns:h="http://xmlns.jcp.org/jsf/html"
      xmlns:f="http://xmlns.jcp.org/jsf/core">
  <h:head>
@@ -16,12 +17,22 @@
      <h:outputText value="Ola mundo !"/>
      <h1>Maratona Jsf Inicio</h1>
      
-     <h3>Valor: #{estudanteBean.valor}</h3>
      <h3>Nome: #{estudanteBean.estudante.nome}</h3>
      <h3>Sobrenome: #{estudanteBean.estudante.sobrenome}</h3>
      <h3>Turno: #{estudanteBean.estudante.turno}</h3>
      
-	<h:outputLabel value="#{estudanteBean.estudante.turno eq 'MATUTINO'}"/>
-
+	<h:outputLabel value="#{estudanteBean.estudante.turno eq 'MATUTINO'}"/><br/>
+	
+	<!-- Arrays -->
+	<h:outputLabel value="#{estudanteBean.nomesArray[1]}   #{estudanteBean.nomesArray[2]}"/><br/>
+	<!-- ui repeat array -->
+	<ui:repeat var="nome" value="#{estudanteBean.nomesArray}">
+		<h:outputLabel value="#{nome}"/><br/>
+	</ui:repeat>
+	
+	<!-- ui repeat List -->
+	<ui:repeat var="nome" value="#{estudanteBean.nomesList}">
+		<h:outputLabel value="#{nome}"/><br/>
+	</ui:repeat>
  </h:body>
  </html>

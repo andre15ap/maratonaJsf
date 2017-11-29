@@ -1,6 +1,8 @@
 package com.andre.testejsf.java;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
@@ -14,7 +16,22 @@ public class EstudanteBean implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Estudante estudante = new Estudante();
-	private String valor = "deu certo";
+	private String[] nomesArray = {"NomeUm", "NomeDois", "NomeTres"};
+	private List<String> nomesList = new ArrayList<>();
+	
+	public EstudanteBean() {
+		nomesList.add("ListUm");
+		nomesList.add("ListDois");
+		nomesList.add("ListTres");
+	}
+	
+	public List<String> getNomesList() {
+		return nomesList;
+	}
+
+	public void setNomesList(List<String> nomesList) {
+		this.nomesList = nomesList;
+	}
 
 	public Estudante getEstudante() {
 		return estudante;
@@ -24,12 +41,13 @@ public class EstudanteBean implements Serializable{
 		this.estudante = estudante;
 	}
 
-	public String getValor() {
-		return valor;
+	public String[] getNomesArray() {
+		return nomesArray;
 	}
 
-	public void setValor(String valor) {
-		this.valor = valor;
+	public void setNomesArray(String[] nomesArray) {
+		this.nomesArray = nomesArray;
 	}
+
 
 }
