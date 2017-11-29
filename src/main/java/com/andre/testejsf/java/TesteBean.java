@@ -1,4 +1,4 @@
-package com.andre.teste;
+package com.andre.testejsf.java;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;

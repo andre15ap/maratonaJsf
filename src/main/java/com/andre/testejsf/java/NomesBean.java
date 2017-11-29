@@ -1,4 +1,4 @@
-package com.andre.teste;
+package com.andre.testejsf.java;
 
 
 
